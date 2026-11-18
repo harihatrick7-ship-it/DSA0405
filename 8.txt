@@ -1,0 +1,19 @@
+
+import pandas as pd
+
+# Create a sample DataFrame
+sales_data = pd.DataFrame({
+    'product_name': ['Laptop', 'Mobile', 'Laptop', 'Tablet',
+                      'Mobile', 'Laptop', 'Headphones', 'Tablet',
+                      'Mobile', 'Headphones'],
+    'quantity_sold': [10, 20, 15, 12, 25, 18, 30, 8, 15, 20]
+})
+
+# Calculate total quantity sold for each product
+product_sales = sales_data.groupby('product_name')['quantity_sold'].sum()
+
+# Find the top 5 best-selling products
+top_5_products = product_sales.sort_values(ascending=False).head(5)
+
+print("Top 5 best-selling products:")
+print(top_5_products)

@@ -1,0 +1,10 @@
+import matplotlib.pyplot as plt
+
+m = ['Jan', 'Feb', 'Mar', 'Apr', 'May']
+s = [100, 150, 120, 200, 250]
+
+plt.plot(m, s)
+plt.show()
+
+plt.bar(m, s)
+plt.show()
